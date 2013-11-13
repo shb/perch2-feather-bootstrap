@@ -61,6 +61,6 @@ version to be used (default is 4.0.2).
 ### Specifying jQuery version
 
 Similarly as above, you can specify which jQuery version to use by setting
-the top-level 'jquery' option to a string (or array with `version` key set)
-containing the exact version denomination as per (http://code.jquery.com/jquery).
+the top-level `jquery` option to a string (or array with `version` key set)
+containing the exact version denomination as per http://code.jquery.com/jquery.
 
