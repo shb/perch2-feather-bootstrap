@@ -8,7 +8,7 @@ What it does
 ------------
 
 This feather adds css and javascript tags for including boostrap files served by BootstrapCDN.
-By default files from version 3.0.2 are included.
+By default files from version 3.2.0 are included.
 
 The most recent version of jQuery is also automatically included as the `jquery` *component*
 if it's not already present (e.g. already added by another feather).
@@ -25,11 +25,11 @@ Enable the feather adding the following line to `PERCH_PATH/config/feathers.php`
 
     include(PERCH_PATH.'/addons/feathers/bootstrap/runtime.php');
 
-Add perch feathers output inside your pages using `perch_get_css()` and `perch_get_javascript()`.
+Inject the feathers' output inside your pages using `perch_get_css()` and `perch_get_javascript()`.
 
 ### Specifying bootstrap options
-You can specify options by passing an array to the css/javascript output
-functions containing a `bootstrap` key, e.g. like so:
+You can specify options by passing an array to the css output
+function containing a `bootstrap` key, e.g. like so:
 
     perch_get_css(array(
       'bootstrap' => array(
@@ -40,7 +40,7 @@ functions containing a `bootstrap` key, e.g. like so:
 
 Available options are:
 
-- `version`  Selects a previuos version to use. **Check on BootstrapCDN site if unsure about support**
+- `version`  Selects a different version to use. **Check on BootstrapCDN**
 - `theme`    A [Bootswatch theme](http://www.bootstrapcdn.com/#bootswatch_tab)
   to use instead of the default
 
@@ -52,15 +52,13 @@ of `bootstrap` option, e.g.:
     ));
 
 ### Including Font Awesome
-
 By setting the top-level `font-awesome` option to **true** you can also pull in
-[Font Awesome](http://www.bootstrapcdn.com/#fontawesome_tab). You can set it
-to a string or an array containing the `version` key, that must be a valid
-version to be used (default is 4.0.2).
+[Font Awesome](http://www.bootstrapcdn.com/#fontawesome_tab). You can specify
+e versione to use by setting it to a string or an array with a `version`
+key set to the desired version.
 
 ### Specifying jQuery version
-
-Similarly as above, you can specify which jQuery version to use by setting
+Similarly to the above, you can specify which jQuery version to use by setting
 the top-level `jquery` option to a string (or array with `version` key set)
-containing the exact version denomination as per http://code.jquery.com/jquery.
+containing the exact version denomination as per `http://code.jquery.com/jquery`.
 
